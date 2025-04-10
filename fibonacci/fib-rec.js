@@ -1,7 +1,7 @@
-function fibRec(num) {
-  if (num < 2) return num;
-
-  return fibRec(num - 1);
+function fibRec(num, first = 0, second = 1, arr = []) {
+  if (num === 0) return arr;
+  arr.push(first);
+  return fibRec(num - 1, second, first + second, arr);
 }
 
-console.log(fibRec(9));
+console.log(fibRec(4));
